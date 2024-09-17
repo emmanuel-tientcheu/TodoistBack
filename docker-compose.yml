@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: emmanuel
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: todoist
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+volumes:
+  postgres:
